@@ -1,0 +1,104 @@
+/* General body styling */
+body {
+    font-family: "Arial", sans-serif;
+    background:linear-gradient(to right, #c8d3de, #aacff1);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Header styles */
+h2 {
+    margin-top: 20px;
+    color: #10007a;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form container styling */
+form {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Appointment details container styling */
+.appointment-details {
+    margin: 30px auto;
+    max-width: 600px;
+    background-color: #17a2b8;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.appointment-details p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.appointment-details strong {
+    color: #eaff2d;
+}
+
+/* No appointment message styling */
+p {
+    font-size: 18px;
+    margin: 20px;
+    color: #000000;
+}
+
+/* Button styles for navigation links */
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Footer or extra div spacing */
+div {
+    margin-top: 20px;
+}

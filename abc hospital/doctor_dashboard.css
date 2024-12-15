@@ -1,0 +1,137 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #b3ffd0, #8becff);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header styles */
+h1 {
+    background-color: #0056b3;
+    color: white;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Sub-header (h2) styling */
+h2 {
+    margin-top: 30px;
+    color: #333;
+    font-size: 24px;
+    text-transform: capitalize;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Table styling */
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #0056b3;
+    color: white;
+}
+
+thead th {
+    padding: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody td {
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f1f7ff;
+}
+
+/* No data row styling */
+td[colspan] {
+    font-size: 16px;
+    font-weight: bold;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Logout button */
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    thead th, tbody td {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .logout-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+    margin-top: 10px;
+}

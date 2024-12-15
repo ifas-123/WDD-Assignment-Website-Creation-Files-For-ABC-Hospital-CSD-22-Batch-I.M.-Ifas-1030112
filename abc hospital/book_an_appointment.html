@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" type="text/css" href="book_an_appointment.css" />
+</head>
+<body>
+    <div class="appointment-container">
+        <h2>Book an Appointment</h2>
+        <form action="submit_appointment.php" method="POST">
+            <label for="patient_name">Name:</label>
+            <input type="text" id="patient_name" name="patient_name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="contact_no">Contact Number:</label>
+            <input type="tel" id="contact_no" name="contact_no" required>
+        
+            <label for="specialization">Specialization:</label>
+            <select id="specialization" name="specialization" required onchange="fetchDoctors()">
+                <option value="">Select Specialization</option>
+                <option value="Cardiologist">Cardiologist</option>
+                <option value="Neurologist">Neurologist</option>
+                <option value="Pediatrician">Pediatrician</option>
+                <option value="Dermatologist">Dermatologist</option>
+                <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
+                <option value="Gastroenterologist">Gastroenterologist</option>
+                <option value="Oncologist">Oncologist</option>
+                <option value="Psychiatrist">Psychiatrist</option>
+                <option value="Obstetrician/Gynecologist(OB/GYN)">Obstetrician/Gynecologist(OB/GYN)</option>
+                <option value="Endocrinologist">Endocrinologist</option>
+            </select>
+        
+            <label for="doctor_name">Doctor:</label>
+            <select id="doctor_name" name="doctor_name" required onchange="fetchAvailability()">
+                <!-- Options will be populated here -->
+            </select>
+        
+            <label for="availability_time">Availability Time:</label>
+            <input type="datetime-local" id="availability_time"name="availability_time" required>
+
+            <label for="reason">Reason for Appointment:</label>
+            <textarea id="reason" name="reason" required></textarea>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+
+        <script>
+            function fetchDoctors() {
+                var specialization = document.getElementById("specialization").value;
+                
+                if (specialization) {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("GET", "get_doctors.php?specialization=" + specialization, true);
+                    xhr.onload = function() {
+                        if (this.status == 200) {
+                            var doctors = JSON.parse(this.responseText);
+                            var doctorSelect = document.getElementById("doctor_name");
+                            doctorSelect.innerHTML = ""; // Clear previous options
+
+                            doctors.forEach(function(doctor) {
+                                var option = document.createElement("option");
+                                option.value = doctor.name; // Ensure this matches the expected property
+                                option.textContent = doctor.name;
+                                doctorSelect.appendChild(option);
+                            });
+                        } else {
+                            console.error('Error fetching doctors:', this.statusText);
+                        }
+                    };
+                    xhr.onerror = function() {
+                        console.error('Request failed');
+                    };
+                    xhr.send();
+                } else {
+                    document.getElementById("doctor_name").innerHTML = ""; // Clear if no specialization selected
+                }
+            }
+        </script>   
+    </div>
+</body>
+</html>

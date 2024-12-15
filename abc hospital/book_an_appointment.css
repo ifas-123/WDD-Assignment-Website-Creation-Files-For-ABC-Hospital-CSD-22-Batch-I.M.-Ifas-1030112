@@ -1,0 +1,90 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #333;
+}
+
+/* Container */
+.appointment-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    text-align: center;
+}
+
+/* Heading */
+.appointment-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background: linear-gradient(to right, #3744fc, #ff009d);
+    border-radius: 10px;
+
+}
+
+
+/* Form Labels */
+form label {
+    display: block;
+    font-size: 1.1rem;
+    margin: 15px 0 5px;
+    text-align: left;
+    color: #333;
+}
+
+/* Form Inputs */
+form input, form select, form textarea {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Dropdowns */
+form select {
+    cursor: pointer;
+    background: #f9f9f9;
+}
+
+/* Textarea */
+form textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Button */
+form button {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .appointment-container {
+        padding: 15px 20px;
+    }
+
+    form label, form button {
+        font-size: 1rem;
+    }
+}

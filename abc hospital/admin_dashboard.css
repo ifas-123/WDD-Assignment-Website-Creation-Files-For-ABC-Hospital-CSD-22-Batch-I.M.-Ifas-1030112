@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #a0e6ff, #cfe5f8);
+    color: #333;
+}
+
+/* Header Styles */
+h1 {
+    background-color: #0056b3;
+    color: white;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Logout Button */
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Forms */
+form {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Tables */
+table {
+    width: 80%; /* Reduce table width */
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 10px; /* Reduce padding */
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Table Cell Button Alignment */
+table td {
+    text-align: center;
+    vertical-align: middle; /* Ensures proper vertical alignment */
+}
+
+/* Form Styling Inside Table */
+table td form {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove padding */
+    display: block; /* Ensure form wraps the button cleanly */
+}
+
+
+.remove-button {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 6px 12px; /* Adjust padding for smaller size */
+    border: none;
+    border-radius: 3px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 12px;
+    box-shadow: none; /* Remove extra shadow */
+    display: block; /* Make button fill the table cell */
+    width: 100%; /* Ensure it fits the cell */
+    text-align: center; /* Center the text */
+}
+
+.remove-button:hover {
+    background-color: #c82333;
+}
+
+/* Section Titles */
+h2 {
+    margin-top: 30px;
+    color: #333;
+    font-size: 24px;
+    text-transform: capitalize;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Utility */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+    margin-top: 10px;
+}
